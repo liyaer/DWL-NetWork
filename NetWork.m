@@ -269,7 +269,7 @@ static NetWork *_instance;
  */
 -(void)PostGetAppInfo:(NSString *)url sucess:(SuccessBlock) sucess Error:(ErrorBlock) error
 {
-    if (self.hasNet)
+    if (self.hasNet)//可以将判断写在上面封装的Post、Get方法中，调用更加简洁；写在这里的好处可以对不同的接口做不同的处理
     {
         [self PostRequestWithPath:url Params:nil Success:sucess Error:error];
     }
