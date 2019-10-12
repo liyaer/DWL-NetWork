@@ -57,6 +57,7 @@ static NetWork *_instance;
 
 #pragma mark - 苹果自带的Reachability检测网络状态
 
+//外界通过调用 [xxx.reachability startNotifier] 启动监听
 -(Reachability *)reachability
 {
     if (!_reachability)
